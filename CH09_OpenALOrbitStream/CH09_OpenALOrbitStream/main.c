@@ -2,7 +2,8 @@
 #import <OpenAL/al.h>
 #import <OpenAL/alc.h>
 
-#define STREAM_PATH CFSTR ("/Library/Audio/Apple Loops/Apple/iLife Sound Effects/Jingles/Kickflip Long.caf")
+//#define STREAM_PATH CFSTR ("/Users/jake/Desktop/intro.caf")
+#define STREAM_PATH CFSTR ("http://wxyc.info/playlists/recentEntries?v=2&n=15")
 //#define STREAM_PATH CFSTR ("/Volumes/Sephiroth/Tunes/Yes/Highlights - The Very Best Of Yes/Long Distance Runaround.m4a")
 
 #define ORBIT_SPEED 1
@@ -41,7 +42,7 @@ static void CheckError(OSStatus error, const char *operation)
 		// no, format it as an integer
 		sprintf(str, "%d", (int)error);
 	
-	fprintf(stderr, "Error: %s (%s)\n", operation, str);
+	fprintf(stderr, "Error %i: %s (%s)\n", error, operation, str);
 	
 	exit(1);
 }
@@ -75,14 +76,15 @@ void updateSourceLocation (MyStreamPlayer player) {
 
 
 OSStatus setUpExtAudioFile (MyStreamPlayer* player) {
-	CFURLRef streamFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, 
-														   STREAM_PATH,
-														   kCFURLPOSIXPathStyle,
-														   false);
+    CFURLRef streamFileURL = CFURLCreateWithString(kCFAllocatorDefault, STREAM_PATH, 0);
+//    CFURLRef streamFileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault,
+//                                                           STREAM_PATH,
+//                                                           kCFURLPOSIXPathStyle,
+//                                                           false);
 	
 	// describe the client format - AL needs mono
 	memset(&player->dataFormat, 0, sizeof(player->dataFormat));
-	player->dataFormat.mFormatID = kAudioFormatLinearPCM;
+	player->dataFormat.mFormatID = kAudioFormatMPEGLayer3;
 	player->dataFormat.mFormatFlags = kAudioFormatFlagIsSignedInteger | kAudioFormatFlagIsPacked;
 	player->dataFormat.mSampleRate = 44100.0;
 	player->dataFormat.mChannelsPerFrame = 1;

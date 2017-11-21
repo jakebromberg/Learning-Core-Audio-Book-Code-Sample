@@ -11,7 +11,7 @@
 		01B17B2D14A5173C000E5E07 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 01B17B2C14A5173C000E5E07 /* main.c */; };
 		01B17B2F14A5173C000E5E07 /* CH09_OpenALOrbitStream.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 01B17B2E14A5173C000E5E07 /* CH09_OpenALOrbitStream.1 */; };
 		01B17B3614A51797000E5E07 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B17B3514A51797000E5E07 /* AudioToolbox.framework */; };
-		01B17B3814A5179D000E5E07 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B17B3714A5179D000E5E07 /* OpenAL.framework */; };
+		2394A5DD1FC266E500B61D4C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2394A5DC1FC266E500B61D4C /* OpenAL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +34,7 @@
 		01B17B2E14A5173C000E5E07 /* CH09_OpenALOrbitStream.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CH09_OpenALOrbitStream.1; sourceTree = "<group>"; };
 		01B17B3514A51797000E5E07 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		01B17B3714A5179D000E5E07 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
+		2394A5DC1FC266E500B61D4C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = ../../../../../System/Library/Frameworks/OpenAL.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B17B3814A5179D000E5E07 /* OpenAL.framework in Frameworks */,
+				2394A5DD1FC266E500B61D4C /* OpenAL.framework in Frameworks */,
 				01B17B3614A51797000E5E07 /* AudioToolbox.framework in Frameworks */,
 				01B17B2A14A5173C000E5E07 /* CoreFoundation.framework in Frameworks */,
 			);
@@ -71,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				01B17B3714A5179D000E5E07 /* OpenAL.framework */,
+				2394A5DC1FC266E500B61D4C /* OpenAL.framework */,
 				01B17B3514A51797000E5E07 /* AudioToolbox.framework */,
 				01B17B2914A5173C000E5E07 /* CoreFoundation.framework */,
 			);
@@ -148,7 +150,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -166,7 +167,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -174,7 +174,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -185,25 +184,20 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		01B17B3314A5173C000E5E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
 		01B17B3414A5173C000E5E07 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
