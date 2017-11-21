@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		011C4AA714A505C300A35D5F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C4AA614A505C300A35D5F /* CoreFoundation.framework */; };
 		011C4AAA14A505C300A35D5F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 011C4AA914A505C300A35D5F /* main.c */; };
 		011C4AAC14A505C300A35D5F /* CH06_AudioConverter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 011C4AAB14A505C300A35D5F /* CH06_AudioConverter.1 */; };
-		011C4AB314A505E900A35D5F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C4AB214A505E900A35D5F /* AudioToolbox.framework */; };
+		235CF68D1FC4A58D0034B5D9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 011C4AA614A505C300A35D5F /* CoreFoundation.framework */; };
+		235CF68F1FC4A59A0034B5D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235CF68E1FC4A5920034B5D9 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,15 +32,16 @@
 		011C4AA914A505C300A35D5F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		011C4AAB14A505C300A35D5F /* CH06_AudioConverter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CH06_AudioConverter.1; sourceTree = "<group>"; };
 		011C4AB214A505E900A35D5F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		235CF68E1FC4A5920034B5D9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		011C4A9F14A505C300A35D5F /* Frameworks */ = {
+		235CF68C1FC4A4EC0034B5D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011C4AB314A505E900A35D5F /* AudioToolbox.framework in Frameworks */,
-				011C4AA714A505C300A35D5F /* CoreFoundation.framework in Frameworks */,
+				235CF68F1FC4A59A0034B5D9 /* AudioToolbox.framework in Frameworks */,
+				235CF68D1FC4A58D0034B5D9 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				011C4AB214A505E900A35D5F /* AudioToolbox.framework */,
+				235CF68E1FC4A5920034B5D9 /* AudioToolbox.framework */,
 				011C4AA614A505C300A35D5F /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -90,7 +92,7 @@
 			buildConfigurationList = 011C4AAF14A505C300A35D5F /* Build configuration list for PBXNativeTarget "CH06_AudioConverter" */;
 			buildPhases = (
 				011C4A9E14A505C300A35D5F /* Sources */,
-				011C4A9F14A505C300A35D5F /* Frameworks */,
+				235CF68C1FC4A4EC0034B5D9 /* Frameworks */,
 				011C4AA014A505C300A35D5F /* CopyFiles */,
 			);
 			buildRules = (
@@ -143,63 +145,26 @@
 		011C4AAD14A505C300A35D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		011C4AAE14A505C300A35D5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		011C4AB014A505C300A35D5F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
 		011C4AB114A505C300A35D5F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
